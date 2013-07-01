@@ -6,7 +6,7 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
       	{% for eachslider in sliders %}
-      		{% if forloop.counter == 1 %}
+      		{% if forloop.first %}
         <div class="item active">
           <img src="{{eachslider.slider_image.url}}" alt="">
           <div class="container">

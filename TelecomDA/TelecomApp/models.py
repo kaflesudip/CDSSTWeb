@@ -37,6 +37,14 @@ class Screenshot(models.Model):
     screenshot_image = models.ImageField(upload_to="/", null=True, blank=True)
 
 
+class Tool(models.Model):
+    """The homepage of our project"""
+    tool_header = models.CharField(max_length=500, blank=True)
+    tool_image = models.ImageField(upload_to="/",
+                                          null=True, blank=True)
+    tool_description = models.TextField(max_length=500, blank=True)
+
+
 class Team(models.Model):
     """Model for representing team description"""
     name = models.CharField(max_length=500, blank=True)

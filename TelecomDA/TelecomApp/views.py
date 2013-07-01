@@ -1,20 +1,41 @@
 # Create your views here.
 from django.shortcuts import render_to_response
-from django.core.context_processors import csrf
 from django.views.decorators.csrf import csrf_exempt
-import datetime
+from models import *
+
 
 def home(request):
-	return render_to_response('home.html')
+    sliders = HomeSlider.objects.all()
+    home_content = HomeContent.objects.all()
+    parameters = {}
+    parameters["slider"] = sliders
+    parameters["home_content"] = home_content
+    return render_to_response('home.html', parameters)
+
 
 def overview(request):
-	return render_to_response('overview.html')
+    overviews = Overview.objects.all()
+    parameters = {}
+    parameters["overviews"] = overviews
+    return render_to_response('overview.html', parameters)
+
 
 def output(request):
-	return render_to_response('output.html')
+    screenshots = Screenshot.objects.all()
+    parameters = {}
+    parameters["screenshots"] = screenshots
+    return render_to_response('screenshot.html', parameters)
+
 
 def tools(request):
-	return render_to_response('tools.html')
+    tools = Tool.objects.all()
+    parameters = {}
+    parameters["tools"] = tools
+    return render_to_response('tools.html', parameters)
+
 
 def team(request):
-	return render_to_response('team.html')
+    teams = Team.objects.all()
+    parameters = {}
+    parameters["teams"] = teams
+    return render_to_response('team.html', parameters)

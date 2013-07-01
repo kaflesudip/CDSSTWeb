@@ -8,6 +8,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'TelecomApp.views.home'),
+    url(r'^overview/?$', 'TelecomApp.views.overview'),
+    url(r'^output/?$', 'TelecomApp.views.output'),
+    url(r'^tools/?$', 'TelecomApp.views.tools'),
+    url(r'^team/?$', 'TelecomApp.views.team'),
     # url(r'^TelecomDA/', include('TelecomDA.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

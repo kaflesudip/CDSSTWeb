@@ -52,7 +52,7 @@
       <div class="row">
       		{% for eachcontent in home_content %}
         <div class="span4">
-          <img class="img-circle" src="{{eachcontent.mid_content_image}}">
+          <img class="img-circle" src="{{eachcontent.mid_content_image.url}}">
           <h2>{{eachcontent.mid_content_header}}</h2>
           <p>{{eachcontent.mid_content_description}}</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
@@ -66,7 +66,7 @@
       <hr class="featurette-divider">
 		{% for eachcontent in home_detail %}
       <div class="featurette">
-        <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image}}">
+        <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image.url}}">
         <h2 class="featurette-heading">{{eachcontent.mid_content_header}}</h2>
         <p class="lead">{{eachcontent.mid_content_description}}</p>
       </div>

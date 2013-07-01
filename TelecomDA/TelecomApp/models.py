@@ -4,14 +4,15 @@ from django.db import models
 class HomeSlider(models.Model):
     """Slider to show in homepage"""
     slider_header = models.CharField(max_length=500, blank=True)
-    slider_image = models.ImageField(upload_to="/", null=True, blank=True)
+    slider_image = models.ImageField(upload_to=".",
+                                     null=True, blank=True)
     slider_description = models.TextField(max_length=500, blank=True)
 
 
 class HomeContent(models.Model):
     """The homepage of our project"""
     mid_content_header = models.CharField(max_length=500, blank=True)
-    mid_content_image = models.ImageField(upload_to="/",
+    mid_content_image = models.ImageField(upload_to=".",
                                           null=True, blank=True)
     mid_content_description = models.TextField(max_length=500, blank=True)
 
@@ -19,7 +20,7 @@ class HomeContent(models.Model):
 class HomeDetails(models.Model):
     """The homepage of our project"""
     mid_content_header = models.CharField(max_length=500, blank=True)
-    mid_content_image = models.ImageField(upload_to="/",
+    mid_content_image = models.ImageField(upload_to=".",
                                           null=True, blank=True)
     mid_content_description = models.TextField(max_length=5000, blank=True)
 
@@ -42,14 +43,15 @@ class Overview(models.Model):
 
 class Screenshot(models.Model):
     """Screenshots of our output"""
-    screenshot_image = models.ImageField(upload_to="/", null=True, blank=True)
+    screenshot_image = models.ImageField(upload_to=".", null=True,
+                                         blank=True)
 
 
 class Tool(models.Model):
     """The homepage of our project"""
     tool_header = models.CharField(max_length=500, blank=True)
-    tool_image = models.ImageField(upload_to="/",
-                                          null=True, blank=True)
+    tool_image = models.ImageField(upload_to=".",
+                                   null=True, blank=True)
     tool_description = models.TextField(max_length=500, blank=True)
 
 
@@ -59,5 +61,5 @@ class Team(models.Model):
     Institute = models.CharField(max_length=500, blank=True)
     roll_no = models.CharField(max_length=500, blank=True)
     email = models.EmailField(max_length=500, blank=True)
-    image = models.ImageField(upload_to="/", null=True, blank=True)
+    image = models.ImageField(upload_to=".", null=True, blank=True)
     website = models.URLField(null=True, blank=True)

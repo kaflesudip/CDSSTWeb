@@ -6,6 +6,7 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
+<<<<<<< HEAD
       <div class="row">
         <div class="span4">
           <img class="img-circle" data-src="holder.js/140x140">
@@ -54,10 +55,10 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
-      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
 
+=======
       {% for eachtool in tools %}
         <div class="row">
           <div class="span4">
@@ -68,45 +69,5 @@
       {% endfor %}
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+>>>>>>> 00bc9df3590e39991ade50b61b4d5c38565dab63
 {% endblock %}

@@ -5,6 +5,7 @@
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
+<<<<<<< HEAD
       	{% for eachslider in slider %}
         {% if forloop.first%}
           <div class="item active">
@@ -12,6 +13,11 @@
           <div class="item">
         {% endif %}
         
+=======
+      	{% for eachslider in sliders %}
+      		{% if forloop.first %}
+        <div class="item active">
+>>>>>>> a852ab569e9c88295411f854d13267115a281646
           <img src="{{eachslider.slider_image.url}}" alt="">
           <div class="container">
             <div class="carousel-caption">

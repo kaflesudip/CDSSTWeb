@@ -7,4 +7,5 @@ admin.site.register(Overview)
 admin.site.register(Screenshot)
 admin.site.register(Team)
 admin.site.register(Tool)
+admin.site.register(HomeDetails)
 

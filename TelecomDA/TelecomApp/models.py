@@ -37,7 +37,7 @@ class HomeDetails(models.Model):
 class Overview(models.Model):
     """Overview page for our project"""
     title = models.CharField(max_length=500, blank=True)
-    content = models.TextField(max_length=500, blank=True)
+    content = models.TextField(max_length=5000, blank=True)
     #abstract = models.TextField(max_length=5000, blank=True)
     #introduction = models.TextField(max_length=5000, blank=True)
     #objective = models.TextField(max_length=5000, blank=True)

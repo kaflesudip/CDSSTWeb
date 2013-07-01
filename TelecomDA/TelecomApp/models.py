@@ -8,6 +8,9 @@ class HomeSlider(models.Model):
                                      null=True, blank=True)
     slider_description = models.TextField(max_length=500, blank=True)
 
+    def __unicode__(self):
+        return self.slider_header
+
 
 class HomeContent(models.Model):
     """The homepage of our project"""
@@ -16,6 +19,9 @@ class HomeContent(models.Model):
                                           null=True, blank=True)
     mid_content_description = models.TextField(max_length=500, blank=True)
 
+    def __unicode__(self):
+        return self.mid_content_header
+
 
 class HomeDetails(models.Model):
     """The homepage of our project"""
@@ -23,6 +29,9 @@ class HomeDetails(models.Model):
     mid_content_image = models.ImageField(upload_to=".",
                                           null=True, blank=True)
     mid_content_description = models.TextField(max_length=5000, blank=True)
+
+    def __unicode__(self):
+        return self.mid_content_header
 
 
 class Overview(models.Model):
@@ -40,6 +49,9 @@ class Overview(models.Model):
     #schedule = models.TextField(max_length=5000, blank=True)
     #cost = models.TextField(max_length=5000, blank=True)
 
+    def __unicode__(self):
+        return self.title
+
 
 class Screenshot(models.Model):
     """Screenshots of our output"""
@@ -54,6 +66,9 @@ class Tool(models.Model):
                                    null=True, blank=True)
     tool_description = models.TextField(max_length=500, blank=True)
 
+    def __unicode__(self):
+        return self.tool_header
+
 
 class Team(models.Model):
     """Model for representing team description"""
@@ -63,3 +78,6 @@ class Team(models.Model):
     email = models.EmailField(max_length=500, blank=True)
     image = models.ImageField(upload_to=".", null=True, blank=True)
     website = models.URLField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name

@@ -5,36 +5,31 @@
     ================================================== -->
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
+      	{% for eachslider in sliders %}
+      		{% if forloop.counter == 1 %}
         <div class="item active">
-          <img src="/media_dir/img/examples/slide-01.jpg" alt="">
+          <img src="{{eachslider.slider_image.url}}" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+              <h1>{{sliders.slider_header}}</h1>
+              <p class="lead">{{sliders.slider_description}}</p>
+              <a class="btn btn-large btn-primary" href="#">Know more</a>
             </div>
           </div>
         </div>
+        	{% else %}
         <div class="item">
-          <img src="/media_dir/img/examples/slide-02.jpg" alt="">
+          <img src="{{eachslider.slider_image.url}}" alt="">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <h1>{{sliders.slider_header}}</h1>
+              <p class="lead">{{sliders.slider_description}}</p>
+              <a class="btn btn-large btn-primary" href="#">Know more</a>
             </div>
           </div>
         </div>
-        <div class="item">
-          <img src="/media_dir/img/examples/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
+        	{% endif %}
+        {% endfor %}
       </div>
       <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
@@ -52,7 +47,7 @@
       <div class="row">
       		{% for eachcontent in home_content %}
         <div class="span4">
-          <img class="img-circle" src="{{eachcontent.mid_content_image}}">
+          <img class="img-circle" src="{{eachcontent.mid_content_image.url}}">
           <h2>{{eachcontent.mid_content_header}}</h2>
           <p>{{eachcontent.mid_content_description}}</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
@@ -66,7 +61,7 @@
       <hr class="featurette-divider">
 		{% for eachcontent in home_detail %}
       <div class="featurette">
-        <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image}}">
+        <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image.url}}">
         <h2 class="featurette-heading">{{eachcontent.mid_content_header}}</h2>
         <p class="lead">{{eachcontent.mid_content_description}}</p>
       </div>

@@ -26,7 +26,7 @@ def output(request):
     screenshots = Screenshot.objects.all()
     parameters = {}
     parameters["screenshots"] = screenshots
-    return render_to_response('screenshot.html', parameters)
+    return render_to_response('output.html', parameters)
 
 
 def tools(request):

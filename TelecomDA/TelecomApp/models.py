@@ -55,8 +55,13 @@ class Overview(models.Model):
 
 class Screenshot(models.Model):
     """Screenshots of our output"""
+    screenshot_header = models.CharField(max_length=500, blank=True)
+    screenshot_description = models.TextField(max_length=5000, blank=True)
     screenshot_image = models.ImageField(upload_to=".", null=True,
                                          blank=True)
+
+    def __unicode__(self):
+        return self.screenshot_header
 
 
 class Tool(models.Model):

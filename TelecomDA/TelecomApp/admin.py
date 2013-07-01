@@ -6,3 +6,5 @@ admin.site.register(HomeContent)
 admin.site.register(Overview)
 admin.site.register(Screenshot)
 admin.site.register(Team)
+admin.site.register(Tool)
+

@@ -6,12 +6,14 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      {% for eachtool in tpols %}
+      {% for eachtool in tools %}
         <div class="row">
           <div class="span4">
             <img class="img-circle" src="{{eachtool.tool_image.url}}">
-            <h2>{{tool_header}}</h2>
-            <p>{{tool_description}}</p>
+            <h2>{{eachtool.tool_header}}</h2>
+            <p>{{eachtool.tool_description}}</p>
           </div><!-- /.span4 -->
       {% endfor %}
+    </div>
+  </div>
 {% endblock %}

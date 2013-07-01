@@ -16,6 +16,14 @@ class HomeContent(models.Model):
     mid_content_description = models.TextField(max_length=500, blank=True)
 
 
+class HomeDetails(models.Model):
+    """The homepage of our project"""
+    mid_content_header = models.CharField(max_length=500, blank=True)
+    mid_content_image = models.ImageField(upload_to="/",
+                                          null=True, blank=True)
+    mid_content_description = models.TextField(max_length=5000, blank=True)
+
+
 class Overview(models.Model):
     """Overview page for our project"""
     title = models.CharField(max_length=500, blank=True)

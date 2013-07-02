@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
+
 <!-- Carousel
     ================================================== -->
     <div style="height:80px"></div>
@@ -63,4 +64,10 @@
       <!-- /END THE FEATURETTES -->
 
 	</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  $("#home").addClass("active");
+</script>
 {% endblock %}

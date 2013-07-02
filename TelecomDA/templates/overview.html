@@ -6,11 +6,14 @@
 
     <!-- Docs nav
     ================================================== -->
-    <div class="row">
+     <div class="row">
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
           {% for eachheader in overviews %}
-          <li><a href="#{{eachheader.title}}"><i class="icon-chevron-right"></i>{{eachheader.title}}</a></li>
+          
+            <li>
+            <li><a href="#{{eachheader.title}}">
+              <i class="icon-chevron-right"></i>{{eachheader.title}}</a></li>
           {% endfor %}
         </ul>
       </div>

@@ -20,7 +20,7 @@
           <div class="page-header">
             <h1>{{eachheader.title}}</h1>
           </div>
-          <p>{{eachheader.content}}</p>
+          <p>{{eachheader.content|safe}}</p>
         </section>
           {% endfor %}
         </div>

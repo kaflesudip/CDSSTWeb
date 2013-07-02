@@ -1,11 +1,12 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
 <!-- Carousel
     ================================================== -->
+    <div style="height:80px"></div>
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
-<<<<<<< HEAD
       	{% for eachslider in slider %}
         {% if forloop.first%}
           <div class="item active">
@@ -13,11 +14,6 @@
           <div class="item">
         {% endif %}
         
-=======
-      	{% for eachslider in sliders %}
-      		{% if forloop.first %}
-        <div class="item active">
->>>>>>> a852ab569e9c88295411f854d13267115a281646
           <img src="{{eachslider.slider_image.url}}" alt="">
           <div class="container">
             <div class="carousel-caption">
@@ -68,4 +64,78 @@
       <!-- /END THE FEATURETTES -->
 
 	</div>
+=======
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<!-- Carousel
+    ================================================== -->
+    <div style="height:80px"></div>
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+      	{% for eachslider in slider %}
+        {% if forloop.first%}
+          <div class="item active">
+        {% else %}
+          <div class="item">
+        {% endif %}
+        
+          <img src="{{eachslider.slider_image.url}}" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>{{eachslider.slider_header}}</h1>
+              <p class="lead">{{eachslider.slider_description}}</p>
+              <a class="btn btn-large btn-primary" href="#">Know more</a>
+            </div>
+          </div>
+        </div>
+        	
+        {% endfor %}
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+      		{% for eachcontent in home_content %}
+        <div class="span4">
+          <img class="img-circle" src="{{eachcontent.mid_content_image.url}}">
+          <h2>{{eachcontent.mid_content_header}}</h2>
+          <p>{{eachcontent.mid_content_description}}</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div><!-- /.span4 -->
+		{% endfor %}
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+		{% for eachcontent in home_detail %}
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image.url}}">
+        <h2 class="featurette-heading">{{eachcontent.mid_content_header}}</h2>
+        <p class="lead">{{eachcontent.mid_content_description}}</p>
+      </div>
+	{% endfor %}
+      <!-- /END THE FEATURETTES -->
+
+	</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  $("#home").addClass("active");
+</script>
+>>>>>>> cf1a1efca5cb4ac2bc2168e69c20d7507e4af039
 {% endblock %}

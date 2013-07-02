@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+<div style="height:200px"></div>
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+          {% for eachteam in teams %}
+        <div class="span4">
+          <img class="img-circle" src="{{eachteam.image.url}}">
+          <h2>{{eachteam.name}}</h2>
+          <p>Institute: {{eachteam.Institute}}<br>
+          Roll No: {{eachteam.roll_no}}<br>
+          Email: {{eachteam.email}}<br>
+          Website: {{eachteam.website}}
+          </p>
+        </div><!-- /.span4 -->
+    {% endfor %}
+      </div><!-- /.row -->
+  </div>
+=======
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
@@ -20,8 +42,10 @@
   </div>
 {% endblock %}
 
+
 {% block scripts %}
 <script>
   $("#team_name").addClass("active");
 </script>
+>>>>>>> cf1a1efca5cb4ac2bc2168e69c20d7507e4af039
 {% endblock %}

@@ -289,8 +289,8 @@
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="overview">Project Overview</a></li>
+                <li id="home"><a href="/">Home</a></li>
+                <li id="overview"><a href="overview">Project Overview</a></li>
                 <!-- <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Overview<b class="caret"></b></a>
                   <ul class="dropdown-menu">
@@ -306,9 +306,9 @@
                     <li><a href="#">Cost Estimation</a></li>
                   </ul>
                 </li> -->
-                <li><a href="tools">Tools Used</a></li>
-                <li><a href="output">Output Screenshots</a></li>
-                <li><a href="team">Team</a></li>
+                <li id="tools"><a href="tools">Tools Used</a></li>
+                <li id="output"><a href="output">Output Screenshots</a></li>
+                <li id="team_name"><a href="team">Team</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
                 
               </ul>
@@ -359,5 +359,8 @@
       }(window.jQuery)
     </script>
     <script src="{% static "js/holder/holder.js"%}"></script>
+
+  {% block scripts %}
+  {% endblock %}
   </body>
 </html>

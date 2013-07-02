@@ -4,8 +4,21 @@
 {% block content %}
 <div style="height:200px"></div>
     <div class="container marketing">
+        
+        {% for eachtool in tools|slice:":3" %}
         <div class="row">
-          {% for eachtool in tools %}
+          <div class="span4">
+            <img class="img-circle" src="{{eachtool.tool_image.url}}">
+            <h2>{{eachtool.tool_header}}</h2>
+            <p>{{eachtool.tool_description}}</p>
+          </div><!-- /.span4 -->
+
+      {% endfor %}
+    </div>
+  </div>
+  <div class="container marketing">
+        {% for eachtool in tools|slice:"3:" %}
+        <div class="row">
           <div class="span4">
             <img class="img-circle" src="{{eachtool.tool_image.url}}">
             <h2>{{eachtool.tool_header}}</h2>
@@ -14,4 +27,5 @@
       {% endfor %}
     </div>
   </div>
+
 {% endblock %}

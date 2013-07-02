@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div style="height:200px"></div>
+    <div class="container marketing">
+      <!-- START THE FEATURETTES -->
+
+      
+            <!-- START THE FEATURETTES -->
+    {% for eachcontent in screenshots %}
+    <hr class="featurette-divider">
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="{{eachcontent.screenshot_image.url}}">
+        <h2 class="featurette-heading">{{eachcontent.screenshot_header}}</h2>
+        <p class="lead">{{eachcontent.screenshot_description}}</p>
+      </div>
+  {% endfor %}
+      <!-- /END THE FEATURETTES -->
+=======
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
@@ -18,8 +38,10 @@
       <!-- /END THE FEATURETTES -->
 {% endblock %}
 
+
 {% block scripts %}
 <script>
   $("#output").addClass("active");
 </script>
+>>>>>>> cf1a1efca5cb4ac2bc2168e69c20d7507e4af039
 {% endblock %}

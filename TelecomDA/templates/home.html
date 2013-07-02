@@ -3,7 +3,6 @@
 {% block content %}
 <!-- Carousel
     ================================================== -->
-    <div style="height:80px"></div>
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
       	{% for eachslider in slider %}
@@ -52,13 +51,15 @@
 
       <!-- START THE FEATURETTES -->
 
-      <hr class="featurette-divider">
+      
 		{% for eachcontent in home_detail %}
+    <hr class="featurette-divider">
       <div class="featurette">
         <img class="featurette-image pull-right" src="{{eachcontent.mid_content_image.url}}">
         <h2 class="featurette-heading">{{eachcontent.mid_content_header}}</h2>
         <p class="lead">{{eachcontent.mid_content_description}}</p>
       </div>
+
 	{% endfor %}
       <!-- /END THE FEATURETTES -->
 
